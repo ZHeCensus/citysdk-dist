@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./citysdk.js"></script>
+</head>
+
+<body>
+    <script>
+        census({
+                "vintage": 2015,
+                "geoHierarchy": {
+                    "county": {
+                        "lat": 28.2639,
+                        "lng": -80.7214
+                    }
+                }
+            },
+            function(err, res){
+                document.body.innerText = JSON.stringify(res)
+            }
+        )
+    </script>
+
+</body>
+
+</html>
